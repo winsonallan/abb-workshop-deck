@@ -64,7 +64,7 @@ export default function Sidebar() {
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="fixed top-4 left-4 z-50 p-2 rounded-md bg-[var(--prussian-blue)] text-[var(--floral-white)] hover:bg-[var(--reseda-green)] transition-all duration-300 shadow-md cursor-pointer"
+          className="fixed top-4 left-4 z-50 p-2 rounded-md bg-[var(--prussian-blue)] text-[var(--floral-white)] hover:bg-[var(--reseda-green)] transition-all duration-300 shadow-md shadow-(color:--reseda-green) cursor-pointer"
         >
           <Menu size={22} />
         </button>
@@ -77,10 +77,10 @@ export default function Sidebar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed left-0 w-64 bg-[var(--prussian-blue)] text-[var(--floral-white)] shadow-2xl flex flex-col z-40 md:static h-max rounded-xl"
+            className="fixed left-0 w-64 bg-[var(--prussian-blue)] text-[var(--floral-white)] shadow-2xl flex flex-col z-40 md:static h-max rounded-xl shadow-md shadow-(color:--reseda-green)"
             style={{
               maxHeight: "calc(100vh - 4rem)",
-              overflow: "hidden",
+              overflowY: "auto",
               marginTop: "2rem",
               marginLeft: "2rem",
               width: "250px",
