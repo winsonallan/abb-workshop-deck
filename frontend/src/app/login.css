@@ -1,0 +1,87 @@
+.loginContainer {
+  background: var(--floral-gradient);
+  background-blend-mode: overlay;
+  background-image:
+    var(--floral-gradient),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.2) 12px,
+      rgba(255, 255, 255, 0.05) 12px,
+      transparent 80px,
+      transparent 80px
+    );
+  background-size: cover;
+  color: var(--prussian-blue);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.loginContainer input {
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 2px transparent;
+}
+
+.loginContainer input:focus {
+  box-shadow:
+    inset 0 0 0 2px var(--reseda-green),
+    0 0 8px rgba(102, 119, 97, 0.4);
+  transform: scale(1.02);
+}
+
+.loginContainer button {
+  background-color: var(--prussian-blue);
+  color: var(--floral-white);
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 10px rgba(19, 45, 63, 0.3);
+}
+
+/* Button hover = metallic shimmer */
+.loginContainer button:hover {
+  background: linear-gradient(
+    135deg,
+    var(--prussian-blue) 0%,
+    rgba(30, 70, 90, 1) 70%,
+    rgba(28, 75, 87, 0.8) 100%
+  );
+  box-shadow: 0 8px 20px rgba(19, 45, 63, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Button active (click) */
+.loginContainer button:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 8px rgba(19, 45, 63, 0.3);
+}
+
+/* Decorative underline animation under "Login" text */
+.loginContainer h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.loginContainer h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--prussian-blue),
+    var(--reseda-green),
+    var(--light-reseda-green)
+  );
+  border-radius: 2px;
+  transition: transform 0.4s ease;
+}
+
+.loginContainer h2:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}

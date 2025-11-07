@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background: var(--floral-white);
+  --foreground: var(--prussian-blue);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* color palette */
+  --floral-white: rgb(249, 248, 240);
+  --ecru: rgb(184, 160, 102);
+  --prussian-blue: rgb(19, 45, 63);
+  --light-prussian-blue: rgb(181, 224, 255);
+  --prussian-blue-80: rgb(19, 45, 63, 0.8);
+  --reseda-green: rgb(102, 119, 97);
+  --light-reseda-green: rgb(142, 159, 118);
+  --chocolate-cosmos: rgb(100, 23, 34);
+  --penn-red: rgb(149, 25, 12);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* backgrounds */
+  --prussian-blue-circles:
+    radial-gradient(
+      circle at 50% 100%,
+      var(--prussian-blue-80) 5%,
+      var(--prussian-blue) 5% 10%,
+      var(--prussian-blue-80) 10% 15%,
+      var(--prussian-blue) 15% 20%,
+      var(--prussian-blue-80) 20% 25%,
+      var(--prussian-blue) 25% 30%,
+      var(--prussian-blue-80) 30% 35%,
+      var(--prussian-blue) 35% 40%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      var(--prussian-blue-80) 5%,
+      var(--prussian-blue) 5% 10%,
+      var(--prussian-blue-80) 10% 15%,
+      var(--prussian-blue) 15% 20%,
+      var(--prussian-blue-80) 20% 25%,
+      var(--prussian-blue) 25% 30%,
+      var(--prussian-blue-80) 30% 35%,
+      var(--prussian-blue) 35% 40%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 50% 0%,
+      var(--prussian-blue-80) 5%,
+      var(--prussian-blue) 5% 10%,
+      var(--prussian-blue-80) 10% 15%,
+      var(--prussian-blue) 15% 20%,
+      var(--prussian-blue-80) 20% 25%,
+      var(--prussian-blue) 25% 30%,
+      var(--prussian-blue-80) 30% 35%,
+      var(--prussian-blue) 35% 40%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 0 50%,
+      var(--prussian-blue-80) 5%,
+      var(--prussian-blue) 5% 10%,
+      var(--prussian-blue-80) 10% 15%,
+      var(--prussian-blue) 15% 20%,
+      var(--prussian-blue-80) 20% 25%,
+      var(--prussian-blue) 25% 30%,
+      var(--prussian-blue-80) 30% 35%,
+      var(--prussian-blue) 35% 40%,
+      transparent 40%
+    );
+
+  --floral-gradient: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    var(--floral-white) 15%,
+    rgba(237, 233, 212, 0.95) 40%,
+    rgba(240, 235, 210, 0.95) 85%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--prussian-blue); /* scrollbar track background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--light-prussian-blue);
+  border-radius: 10px;
+  border: 2px solid var(--prussian-blue); /* adds contrast edge */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--reseda-green); /* color when hovered */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--light-prussian-blue) var(--prussian-blue);
 }
