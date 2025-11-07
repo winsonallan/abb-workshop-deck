@@ -10,6 +10,7 @@ export default function PageTitle({ text }: { text: string }) {
       className={`font-bold text-3xl text-(--prussian-blue) mb-4 ${
         isOpen ? "mt-1 px-4 pt-6" : "mt-0 px-0 pt-0"
       }`}
+      data-aos="fade-right"
     >
       {text}
     </h1>

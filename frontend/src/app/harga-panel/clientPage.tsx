@@ -8,7 +8,7 @@ import Sidebar from "@/components/Sidebar";
 import { SidebarProvider, useSidebar } from "@/context/SidebarContext";
 
 function Content() {
-  const { isOpen } = useSidebar(); // ✅ Access context here
+  const { isOpen } = useSidebar();
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true, offset: 80 });
@@ -23,23 +23,17 @@ function Content() {
         } py-6`}
         data-aos="fade-right"
       >
-        <PageTitle text="Dashboard"></PageTitle>
+        <PageTitle text="Harga Panel"></PageTitle>
         <div
           className={`mainContent ${isOpen ? "px-4" : "px-0 pt-4"}`}
           data-aos="fade-up"
-        >
-          <LoremIpsum />
-          <LoremIpsum />
-          <LoremIpsum />
-          <LoremIpsum />
-          <LoremIpsum />
-        </div>
+        ></div>
       </main>
     </div>
   );
 }
 
-export default function DashboardClient() {
+export default function HargaPanelClient() {
   return (
     <SidebarProvider>
       <Content />
