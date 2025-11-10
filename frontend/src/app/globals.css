@@ -6,10 +6,13 @@
 
   /* color palette */
   --floral-white: rgb(249, 248, 240);
+  --light-ecru: rgb(222, 197, 138);
   --ecru: rgb(184, 160, 102);
+  --light-ecru: rgb(255, 224, 150);
   --prussian-blue: rgb(19, 45, 63);
   --light-prussian-blue: rgb(181, 224, 255);
   --prussian-blue-80: rgb(19, 45, 63, 0.8);
+  --dark-reseda-green: rgb(47, 78, 38);
   --reseda-green: rgb(102, 119, 97);
   --light-reseda-green: rgb(142, 159, 118);
   --chocolate-cosmos: rgb(100, 23, 34);
@@ -74,11 +77,54 @@
     rgba(240, 235, 210, 0.95) 85%,
     rgba(255, 255, 255, 0.9) 100%
   );
+
+  --metallic-blue-gradient-80: linear-gradient(
+    135deg,
+    var(--prussian-blue) 0%,
+    rgba(30, 70, 90, 1) 70%,
+    rgba(28, 75, 87, 0.8) 100%
+  );
+
+  --metallic-blue-gradient: linear-gradient(
+    135deg,
+    var(--prussian-blue) 0%,
+    rgba(30, 70, 90, 1) 70%,
+    rgba(28, 75, 87, 1) 100%
+  );
+
+  --reseda-green-gradient: linear-gradient(
+    135deg,
+    var(--dark-reseda-green) 0%,
+    rgb(60, 100, 55) 50%,
+    rgb(75, 115, 65) 100%
+  );
+
+  --white-prussian-gradient: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f4f7fa 50%,
+    #e1f3f6 100%
+  );
+
+  --oceanic-blue-gradient: linear-gradient(
+    150deg,
+    rgba(19, 45, 63, 1) 0%,
+    rgba(33, 80, 90, 1) 60%,
+    rgba(47, 100, 90, 1) 100%
+  );
+
+  --autumn-burn-gradient: linear-gradient(
+    160deg,
+    #f28e2c 0%,
+    #eb6f00 60%,
+    #b95500 100%
+  );
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  box-sizing: border-box;
 }
 
 /* Custom Scrollbar Styling */
@@ -87,13 +133,13 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--prussian-blue); /* scrollbar track background */
+  background: var(--floral-white); /* scrollbar track background */
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--light-prussian-blue);
   border-radius: 10px;
-  border: 2px solid var(--prussian-blue); /* adds contrast edge */
+  border: 2px solid var(--floral-white); /* adds contrast edge */
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -103,5 +149,5 @@ body {
 /* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--light-prussian-blue) var(--prussian-blue);
+  scrollbar-color: var(--light-prussian-blue) var(--floral-white);
 }

@@ -64,9 +64,10 @@ export default function Sidebar() {
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="fixed top-4 left-4 z-50 p-2 rounded-md bg-[var(--prussian-blue)] text-[var(--floral-white)] hover:bg-[var(--reseda-green)] transition-all duration-300 shadow-md shadow-(color:--reseda-green) cursor-pointer"
+          className="fixed top-4 left-4 z-50 p-2 rounded-md bg-[var(--prussian-blue)] text-[var(--floral-white)] hover:bg-[var(--reseda-green)] transition-all duration-300 shadow-md shadow-(color:--reseda-green) cursor-pointer flex"
         >
           <Menu size={22} />
+          &nbsp;Show the Menu&nbsp;
         </button>
       )}
 
@@ -77,7 +78,7 @@ export default function Sidebar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed left-0 w-64 bg-[var(--prussian-blue)] text-[var(--floral-white)] shadow-2xl flex flex-col z-40 md:static h-max rounded-xl shadow-md shadow-(color:--reseda-green)"
+            className="fixed left-0 w-64  text-[var(--floral-white)] shadow-2xl flex flex-col z-40 h-max rounded-xl shadow-md shadow-(color:--reseda-green)"
             style={{
               maxHeight: "calc(100vh - 4rem)",
               overflowY: "auto",
@@ -85,6 +86,7 @@ export default function Sidebar() {
               marginLeft: "2rem",
               width: "250px",
               minWidth: "250px",
+              background: "var(--metallic-blue-gradient)",
             }}
           >
             {/* Collapse Button */}
@@ -101,7 +103,7 @@ export default function Sidebar() {
 
             {/* User Info */}
             <div className="flex flex-col items-center text-center px-6 pt-2 pb-6">
-              <p className="text-md font-bold mb-2 text-[var(--ecru)]">
+              <p className="text-md font-bold mb-2 text-[var(--light-ecru)]">
                 Welcome, [Workshop Name]
               </p>
               <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[var(--ecru)] shadow-md">

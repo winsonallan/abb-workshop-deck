@@ -41,12 +41,7 @@
 
 /* Button hover = metallic shimmer */
 .loginContainer button:hover {
-  background: linear-gradient(
-    135deg,
-    var(--prussian-blue) 0%,
-    rgba(30, 70, 90, 1) 70%,
-    rgba(28, 75, 87, 0.8) 100%
-  );
+  background: var(--metallic-blue-gradient-80);
   box-shadow: 0 8px 20px rgba(19, 45, 63, 0.4);
   transform: translateY(-2px);
 }
