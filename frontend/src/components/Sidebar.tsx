@@ -78,7 +78,7 @@ export default function Sidebar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed left-0 w-64  text-[var(--floral-white)] shadow-2xl flex flex-col z-40 h-max rounded-xl shadow-md shadow-(color:--reseda-green)"
+            className="fixed left-0 w-64 text-[var(--floral-white)] shadow-2xl flex flex-col z-40 md:static h-max rounded-xl shadow-md shadow-(color:--reseda-green)"
             style={{
               maxHeight: "calc(100vh - 4rem)",
               overflowY: "auto",

@@ -37,11 +37,8 @@ function Content() {
         data-aos="fade-right"
       >
         <PageTitle text="Dashboard"></PageTitle>
-        <div
-          className={`mainContent ${isOpen ? "px-4" : "px-0 pt-0"} w-full`}
-          data-aos="fade-up"
-        >
-          <div className="DashboardStats w-full mt-8">
+        <div className={`mainContent ${isOpen ? "px-4" : "px-0 pt-0"} w-full`}>
+          <div className="DashboardStats w-full mt-8" data-aos="fade-right">
             <section className="DashboardStatsCards grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 w-full mt-4 gap-x-8 gap-y-8">
               <StatsCard
                 title="Total Orders"
