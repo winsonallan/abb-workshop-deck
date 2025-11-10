@@ -2,6 +2,7 @@
 
 import AOS from "aos";
 import { useEffect } from "react";
+import DataTable from "@/components/harga-panel/DataTable";
 import LoremIpsum from "@/components/LoremIpsum";
 import PageTitle from "@/components/PageTitle";
 import Sidebar from "@/components/Sidebar";
@@ -18,7 +19,7 @@ function Content() {
     <div className="flex">
       <Sidebar />
       <main
-        className={`transition-all duration-300 ${
+        className={`w-full transition-all duration-300 ${
           isOpen ? "mt-1 px-4" : "mt-10 px-10"
         } py-6`}
         data-aos="fade-right"
@@ -27,7 +28,9 @@ function Content() {
         <div
           className={`mainContent ${isOpen ? "px-4" : "px-0 pt-4"}`}
           data-aos="fade-up"
-        ></div>
+        >
+          <DataTable />
+        </div>
       </main>
     </div>
   );

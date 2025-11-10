@@ -103,7 +103,7 @@ export default function Sidebar() {
 
             {/* User Info */}
             <div className="flex flex-col items-center text-center px-6 pt-2 pb-6">
-              <p className="text-md font-bold mb-2 text-[var(--light-ecru)]">
+              <p className="text-md font-bold mb-2 text-[var(--lighter-ecru)]">
                 Welcome, [Workshop Name]
               </p>
               <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[var(--ecru)] shadow-md">

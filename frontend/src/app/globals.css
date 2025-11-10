@@ -6,9 +6,9 @@
 
   /* color palette */
   --floral-white: rgb(249, 248, 240);
+  --lighter-ecru: rgb(255, 224, 150);
   --light-ecru: rgb(222, 197, 138);
   --ecru: rgb(184, 160, 102);
-  --light-ecru: rgb(255, 224, 150);
   --prussian-blue: rgb(19, 45, 63);
   --light-prussian-blue: rgb(181, 224, 255);
   --prussian-blue-80: rgb(19, 45, 63, 0.8);
